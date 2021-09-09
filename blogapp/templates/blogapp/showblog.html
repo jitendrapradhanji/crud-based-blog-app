@@ -1,0 +1,26 @@
+{% extends 'blogapp/base.html' %}
+{% block title %}Show Blog{% endblock title %}
+{% block body %}
+<div class="container">
+    <h2 style="text-align:center; color: black;"><u>Your All Blog Are Here</u></h2>
+</div>
+<div class="container">
+    {% for i in blog %}
+    <div class="card text-center mb-3 border-warning" style="max-width: 620px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img class="card-img img-fluid" src="/media/{{ i.image }}" style="width:200px;height:160px;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body ">
+                    <h5 class="card-title h2">{{i.title}}</h5>
+                    <p class="card-text">{{i.description}}</p>
+                    <a class="btn btn-sm btn-success" href="{% url 'update' i.id %}">Update</a>
+                    <a class="btn btn-sm btn-danger" href="{% url 'delete' i.id %}">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}

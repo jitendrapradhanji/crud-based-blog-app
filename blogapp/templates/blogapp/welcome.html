@@ -1,0 +1,16 @@
+{% extends 'blogapp/base.html' %}
+
+
+{% block title %}Welcome{% endblock title %}
+
+{% load static %}
+{% block body %}
+<br>
+<div class="container">
+    <h1><span>Hello! {{ request.user }} </span></h1>
+</div>
+<br>
+<div style="text-align: center;">
+    <img src="{% static 'blogapp/images/blog5.jpg' %}" style="width:800px;height:470px;" alt="image">
+</div>
+{% endblock body %}

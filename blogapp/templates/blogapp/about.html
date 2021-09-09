@@ -1,0 +1,28 @@
+{% extends 'blogapp/base.html' %}
+{% block title %}About Us{% endblock title %}
+{% load static %}
+{% block body %}
+<div class="container">.
+    <br>
+    <h1 style="text-align:center; color: black;"><u>About Us</u></h1>
+</div>
+<br>
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            <img src="{% static 'blogapp/images/blog88.jpg' %}" style="width:500px;height:470px;" alt="image">
+        </div>
+        <div class="col" style="text-align: justify;">
+            <h4>A blog is an online journal or informational website displaying
+                information in reverse chronological order, with the latest posts appearing first, at the top. It is a
+                platform where a writer or a group of writers share their views on an individual subject. There are many
+                reasons to start a blog for personal use and only a handful of strong ones for business blogging.
+                Blogging for business, projects, or anything else that might bring you money has a very straightforward
+                purpose – to rank your website higher in Google SERPs, a.k.a. increase your visibility. As a business,
+                you rely on consumers to keep buying your products and services. As a new business, you rely on blogging
+                to help you get to potential consumers and grab their attention. Without blogging, your website would
+                remain invisible.</h4>
+        </div>
+    </div>
+</div>
+{% endblock body %}
